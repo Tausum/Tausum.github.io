@@ -67,7 +67,7 @@
                     } else if (navigator.userAgent.indexOf("Firefox") > 0) {
                         window.location.href = 'about:blank '; //火狐默认状态非window.open的页面window.close是无效的    
                         //window.history.go(-2);     
-                    } else if(navigator.userAgent.indexOf("Chrome")){
+                    } else if(navigator.userAgent.indexOf("Chrome")>0){
                         window.open("about:blank","_self").close();
                     } else{
                         window.opener = null;
