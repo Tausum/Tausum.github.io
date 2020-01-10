@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <head>
-            <meta charset="utf-8" />
-            <title>404</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <style>
-                body {
-                    padding: 0;
-                    margin: 0;
-                    overflow: hidden;
-                }
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>404</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                background-size: cover;
+            }
 
-                p {
-                    color: white;
-                    width: 100%;
-                    text-align: center;
-                }
+            p {
+                color: white;
+                width: 100%;
+                text-align: center;
+            }
 
-                a {
-                    color: white;
-                    transition:all 0.5s;
-                }
-                a:hover{
-                    color: #1abcff;
-                    text-decoration: none;
-                    transition:all 0.5s;
-                }
+            a {
+                color: white;
+                transition: all 0.5s;
+            }
 
-                .large-header {
-                    position: absolute;
-                    width: 100%;
-                }
-            </style>
-        </head>
+            a:hover {
+                color: #1abcff;
+                text-decoration: none;
+                transition: all 0.5s;
+            }
+
+            .large-header {
+                position: absolute;
+                width: 100%;
+            }
+
+            canvas {
+                overflow: hidden;
+            }
+        </style>
+    </head>
     <body>
         <div class="large-header" id="large-header">
             <p style="font-size: 140px;height: 40px;">Ooops!</p>
@@ -50,13 +54,12 @@
         <canvas id="world"></canvas>
 
         <script>
-            var time = 59;
-            window.onload = function() {
-                setTimeout("goindexctime()", 1000)
-            };
+            var time = 60;
+            goindexctime();
 
             function goindexctime() {
                 if (time != -1) {
+                    console.log(time)
                     document.getElementById("timer").innerText = time;
                     setTimeout("goindexctime()", 1000);
                 } else {
