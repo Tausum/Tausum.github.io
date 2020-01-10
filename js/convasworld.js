@@ -119,7 +119,7 @@ function loop() {
 
     RADIUS_SCALE = Math.min(RADIUS_SCALE, RADIUS_SCALE_MAX);
 
-    context.fillStyle = 'rgba(0,0,0,0.05)';
+    context.fillStyle = 'rgba(0,0,0,0.1)';
     context.fillRect(0, 0, context.canvas.width, context.canvas.height);
 
     for (i = 0, len = particles.length; i < len; i++) {
