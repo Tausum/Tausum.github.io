@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>Tau's Box Effect</title>
+
+<link rel="stylesheet" type="text/css" href="fly.css">
+
+<script type="text/javascript" src="js/paper-full.min.js"></script>
+<style>
+    p {
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+    
+    a {
+        color: white;
+        transition: all 0.5s;
+    }
+    
+    a:hover {
+        color: #1abcff;
+        text-decoration: none;
+        transition: all 0.5s;
+    }
+    .instructions {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      letter-spacing: 2px;
+      pointer-events: none;
+    }
+</style>
+</head>
+<body>
+<div style="position: absolute;top:20px; width: 100%;">
+            <p><a href="/" target="_self">返回主页</a></p>
+        </div>
+<canvas id="triangle-lost-in-space" resize="true"></canvas>
+
+<div class="instructions"></div>
+<script type="text/javascript" src="js/fly.js"></script>
+
+<style>
+	canvas{width: 100%;height: 100%}
+</style>
+
+
+</body>
+</html>
