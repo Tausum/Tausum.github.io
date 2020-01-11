@@ -36,6 +36,7 @@
             }
 
             a {
+                font-size: 2vw;
                 color: white;
                 transition: all 0.5s;
             }
@@ -54,10 +55,10 @@
     </head>
     <body>
         <div style="position: absolute;top:20px; width: 100%;">
-            <p><a href="/" target="_self">返回主页</a></p>
+            <p><a onclick="winctrl_backpage()" style="cursor: pointer;"  target="_self">返回主页</a></p>
         </div>
 
-        <canvas></canvas>
+        <canvas style="width: 100vw;height: 100vh;"></canvas>
 
         <div class="instructions"></div>
 
@@ -69,10 +70,10 @@
 
             let w = canvas.width = window.innerWidth * RESOLUTION;
             let h = canvas.height = window.innerHeight * RESOLUTION;
-
-            const PARTICLE_COUNT = 400;
+             
+            const PARTICLE_COUNT = 350;
             const CONNECT_DISTANCE = w * 0.05;
-            const FORCE_DISTANCE = w * 0.1;
+            const FORCE_DISTANCE = w * 0.07;
 
             const r = (n = 1) => Math.random() * n;
             const PI = Math.PI;
@@ -99,7 +100,7 @@
                 y: h * 0.5 + Math.sin(r(TAU)) * r(h * 0.5),
                 angle: r(TAU),
                 speed: r(0.15),
-                normalSpeed: r(0.15),
+                normalSpeed: r(0.25),
                 oscAmplitudeX: r(2),
                 oscSpeedX: 0.001 + r(0.008),
                 oscAmplitudeY: r(2),

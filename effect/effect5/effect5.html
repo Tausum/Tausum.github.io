@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-CN" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Tau's Box Effect</title>
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-<link rel="stylesheet" href="css/style.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tau's Box Effect</title>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css">
 
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<!--必要样式-->
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <!--必要样式-->
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <!--[if IE]>
 		<script src="js/html5.js"></script>
 		<![endif]-->
         <style>
@@ -20,101 +20,97 @@
                 width: 100%;
                 text-align: center;
             }
-            
+
             a {
+                font-size: 2vw;
                 color: white;
                 transition: all 0.5s;
             }
-            
+
             a:hover {
                 color: #1abcff;
                 text-decoration: none;
                 transition: all 0.5s;
             }
         </style>
-	</head>
-	<body>
-		<div class="container demo-1">
-			<div class="content">
-				<div id="large-header" class="large-header">
-					
+    </head>
+    <body>
+        <div class="container demo-1">
+            <div class="content">
+                <div id="large-header" class="large-header">
+                    <div style="position:absolute;left:30%;top:30vh;" class="time" id="time" data-hours="" data-minutes="">
+                        <div class="digit">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="digit">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="digit">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="digit">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="digit">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="digit">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <canvas id="demo-canvas"></canvas>
+                </div>
+            </div>
 
-  <div style="position:absolute;left: 540px; top:300px;"  class="time" id="time" data-hours="" data-minutes="">
-  <div class="digit">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-  <div class="digit">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-  <div class="digit">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-  <div class="digit">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-  <div class="digit">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-  <div class="digit">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
+        </div><!-- /container -->
 
+        <script src="js/TweenLite.min.js"></script>
+        <script src="js/EasePack.min.js"></script>
+        <script src="js/rAF.js"></script>
+        <script src="js/demo-1.js"></script>
 
-</div>
+        <div style="position: absolute;top:20px; width: 100%;">
+            <p><a onclick="winctrl_backpage()" style="cursor: pointer;"  target="_self">返回主页</a></p>
+        </div>
+        <script src="js/Rx.min.js"></script>
+        <script src="js/rxcss.min.js"></script>
+        <script src="js/index.js"></script>
 
-				<canvas  id="demo-canvas"></canvas>	
-			</div>
-			</div>
-			
-			</div><!-- /container -->
-			
-			<script src="js/TweenLite.min.js"></script>
-			<script src="js/EasePack.min.js"></script>
-			<script src="js/rAF.js"></script>
-			<script src="js/demo-1.js"></script>
-
-		<div style="position: absolute;top:20px; width: 100%;">
-		            <p><a href="/" target="_self">返回主页</a></p>
-		        </div>
-<script src="js/Rx.min.js"></script>
-<script src="js/rxcss.min.js"></script>
-<script src="js/index.js"></script>
-
-		</body>
-	</html>
+    </body>
+</html>

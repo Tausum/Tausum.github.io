@@ -26,6 +26,7 @@
             }
 
             a {
+                font-size: 2vw;
                 color: white;
                 transition: all 0.5s;
             }
@@ -35,15 +36,16 @@
                 text-decoration: none;
                 transition: all 0.5s;
             }
+
             .instructions {
-              position: absolute;
-              z-index: 1;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              color: #fff;
-              letter-spacing: 2px;
-              pointer-events: none;
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                letter-spacing: 2px;
+                pointer-events: none;
             }
 
             canvas {
@@ -54,15 +56,16 @@
         </style>
     </head>
     <body>
-        
-        
-        
+
+
+
         <div style="position: absolute;top:20px; width: 100%;">
-            <p><a href="/" target="_self">返回主页</a></p>
+            <p><a onclick="winctrl_backpage()" style="cursor: pointer;" target="_self">返回</a></p>
         </div>
-        
+
         <canvas></canvas>
-<div class="instructions"></div>
+        <div class="instructions"></div>
+        <script src="../../js/windowcontrol.js"></script>
         <script>
             "use strict"; {
                 // particles class
