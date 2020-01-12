@@ -1,13 +1,9 @@
 
 function winctrl_backpage(){
+    // window.history.go(-1);
     let backurl = document.referrer;
-    alert(backurl);
-    if(backurl=="https://taubox.cn/"||backurl=="https://taubox.cn/index.html")
-        history.go(-1);    
+    if(backurl=="https://tausum.github.io/"||backurl=="https://tausum.github.io/index.html"||backurl=="https://tausum.github.io")
+        window.history.go(-1);
     else
         window.location.href="/";
-    // if(backurl=="https://taubox.cn/")
-    //     history.go(-1);    
-    // else
-    //     window.location.href="https://taubox.cn/";
 }

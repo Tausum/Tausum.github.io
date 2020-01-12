@@ -1,0 +1,55 @@
+body {
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+}
+
+a {
+    font-size: 1vw;
+    color: white;
+    transition: all 0.5s;
+}
+
+a:hover {
+    color: #1abcff;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+p {
+    font-size: 2vw;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    font-size: 4vw;
+    text-align: center;
+}
+
+canvas {
+    overflow: hidden;
+}
+
+
+table {
+    width: 60vw;
+    height: 50vh;
+    margin: 0 auto;
+}
+
+td {
+    font-size: 1vh;
+    width: 20vw;
+}
+
+tr {
+    height: 2vh;
+}
+
+.IsHeader {
+    position: absolute;
+    top: 20vh;
+    width: 100%;
+}
