@@ -1,6 +1,7 @@
-* { 
-    touch-action: pan-y; 
+* {
+    touch-action: pan-y;
 }
+
 body {
     background-color: #333;
     padding: 0;
@@ -26,6 +27,7 @@ p {
     width: 100%;
     text-align: center;
 }
+
 h1 {
     font-size: 4vw;
     text-align: center;
@@ -41,7 +43,7 @@ table {
     width: 60vw;
     height: 50vh;
     left: 18vw;
-    text-align: left;   
+    text-align: left;
 }
 
 td {
@@ -52,13 +54,27 @@ td {
 tr {
     height: 2vh;
 }
-table tr td:nth-child(1){
-    
-    
+
+table tr td:nth-child(1) {
+    font-size: 2vw;
+    color: white;
+    text-align: right;
 }
 
 .IsHeader {
     position: absolute;
     top: 20vh;
     width: 100%;
+}
+
+.instructions {
+    position: absolute;
+    z-index: 998;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+    color: #fff;
+    letter-spacing: 2px;
+    pointer-events: none;
 }

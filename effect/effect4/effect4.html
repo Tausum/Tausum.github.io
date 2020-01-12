@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Tau's Box Effect</title>
+        <title>Tau's Box Effect</title>
 
-<link rel="stylesheet" type="text/css" href="fly.css">
+        <link rel="stylesheet" type="text/css" href="fly.css">
 
-<script type="text/javascript" src="js/paper-full.min.js"></script>
-<style>
-    p {
+        <script type="text/javascript" src="js/paper-full.min.js"></script>
+        <style>
+            p {
         color: white;
         width: 100%;
         text-align: center;
@@ -37,21 +37,24 @@
       pointer-events: none;
     }
 </style>
-</head>
-<body>
-<div style="position: absolute;top:20px; width: 100%;">
-            <p><a id="backbtn" style="cursor: pointer;"  target="_self">返回</a></p>
+    </head>
+    <body>
+        <div style="position: absolute;top:20px; width: 100%;">
+            <p><a id="backbtn" style="cursor: pointer;" target="_self">返回</a></p>
         </div>
-<canvas id="triangle-lost-in-space" resize="true"></canvas>
+        <canvas id="triangle-lost-in-space" resize="true"></canvas>
 
-<div class="instructions"></div>
+        <div id="effectdesc" class="instructions">飞机不断朝光标飞行</div>
         <script src="../../js/windowcontrol.js"></script>
-<script type="text/javascript" src="js/fly.js"></script>
+        <script type="text/javascript" src="js/fly.js"></script>
 
-<style>
-	canvas{width: 100%;height: 100%}
-</style>
+        <style>
+            canvas {
+                width: 100%;
+                height: 100%
+            }
+        </style>
 
 
-</body>
+    </body>
 </html>
