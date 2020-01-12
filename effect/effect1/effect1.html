@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8">
@@ -16,7 +16,7 @@
                 height: 100%;
                 background: #000;
                 touch-action: none;
-                content-zooming: none;
+                content: none;
             }
 
             p {
@@ -39,10 +39,11 @@
 
             .instructions {
                 position: absolute;
-                z-index: 1;
-                top: 50%;
+                top:50%;
                 left: 50%;
+                z-index: 998;
                 transform: translate(-50%, -50%);
+                transition: all 1s;
                 color: #fff;
                 letter-spacing: 2px;
                 pointer-events: none;
@@ -64,7 +65,7 @@
         </div>
 
         <canvas></canvas>
-        <div class="instructions"></div>
+        <div id="effectdesc" class="instructions">移动驱散周围元素</div>
         <script src="../../js/windowcontrol.js"></script>
         <script>
             "use strict"; {
@@ -81,19 +82,19 @@
                     }
                     init() {
                         this.x0 = canvas.width * 0.5 + this.i * canvas.width / 240;
-                        this.y0 = canvas.height * 0.5 + this.j * canvas.height / 160;
+                        this.y0 = canvas.height * 0.5+ this.j * canvas.height / 160;
                     }
                     move() {
                         const dx = this.pointer.x - this.x;
                         const dy = this.pointer.y - this.y;
                         const d = Math.sqrt(dx * dx + dy * dy);
-                        const s = 1000 / d;
+                        const s = 800 / d;
                         this.x += -s * (dx / d) + (this.x0 - this.x) * 0.02;
                         this.y += -s * (dy / d) + (this.y0 - this.y) * 0.02;
                         // update buffer position
                         this.pos[0] = this.x;
                         this.pos[1] = this.y;
-                        this.pos[2] = 0.15 * s * s;
+                        this.pos[2] = 0.25 * s * s;
                     }
                 }
                 // webGL canvas
