@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -55,13 +55,14 @@
     </head>
     <body>
         <div style="position: absolute;top:20px; width: 100%;">
-            <p><a onclick="winctrl_backpage()" style="cursor: pointer;"  target="_self">返回</a></p>
+            <p><a id="backbtn" style="cursor: pointer;"  target="_self">返回</a></p>
         </div>
 
         <canvas style="width: 100vw;height: 100vh;"></canvas>
 
         <div class="instructions"></div>
 
+        <script src="../../js/windowcontrol.js"></script>
         <script>
             const canvas = document.querySelector('canvas');
             const ctx = canvas.getContext('2d');

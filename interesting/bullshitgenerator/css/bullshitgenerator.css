@@ -75,7 +75,7 @@
     .链接{
       color: #666666;
     }
-    .图标{
+    .ticon{
       height: 1rem;
       width: 1rem;
       vertical-align: top;
@@ -163,7 +163,7 @@
       padding: 2px 0 0 0;
       vertical-align: baseline;
     }
-    .图标{
+    .ticon{
       height: 0.7rem;
       width: 0.7rem;
       vertical-align: top;

@@ -3,10 +3,13 @@ body{background-image: url(1.jpg);} :root {
   --mouse-y: 0;
 }
 
+
 .time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  top: 25vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;

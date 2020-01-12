@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
     <head>
         <title>狗屁不通文章生成器</title>
         <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
@@ -9,27 +10,19 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM8WXEWW3P"></script>
         <style>
             a {
-                font-size: 4vw;
-                color: #000;
-                transition: all 0.5s;
+                cursor: pointer;
+                transition: all 1s;
             }
             
             a:hover {
                 color: #1abcff;
                 text-decoration: none;
-                transition: all 0.5s;
-            }
-            
-            p {
-                font-size: 2vw;
-                color: white;
-                width: 100%;
-                text-align: center;
+                transition: all 0.1s;
             }
         </style>
     </head>
     <body>
-        <p><a onclick="winctrl_backpage()" style="cursor: pointer;" target="_self">返回</a></p>
+        <p style="width: 100%; text-align: center;"><a id="backbtn" style="font-size: 4vw;" target="_self">返回</a></p>
         <div id="主体">
             <div id="标题">文章生成器</div>
             <div id="主题">
@@ -46,14 +39,14 @@
         <div id="页脚">
             <p>
                 @<a class="链接" href="https://www.zhihu.com/people/su-lan-qia">suulnnka</a>修改版
-                <a class="链接" href="https://github.com/suulnnka/BullshitGenerator"><svg class="图标" viewBox="0 0 16 16"
+                <a class="链接" href="https://github.com/suulnnka/BullshitGenerator"><svg class="ticon" viewBox="0 0 16 16"
                         version="1.1" aria-hidden="true">
                         <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
                     </svg></a>
             </p>
             <p>
                 @<a class="链接" href="https://www.zhihu.com/people/ke-meng-90">menzi11</a>原作者
-                <a class="链接" href="https://github.com/menzi11/BullshitGenerator"><svg class="图标" viewBox="0 0 16 16"
+                <a class="链接" href="https://github.com/menzi11/BullshitGenerator"><svg class="ticon" viewBox="0 0 16 16"
                         version="1.1" aria-hidden="true">
                         <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
                     </svg></a>
@@ -71,7 +64,9 @@
             // let license = load("声明.txt");
             alert(" 声明:\n" +
                 " 本作品使用反996许可证发布\n" +
-                " 仅供测试使用，请勿将生成的文章用于正规用途\n");
+                " 仅供测试使用，请勿将生成的文章用于正规用途\n " + 
+                "点击确定即代表您同意声明内容\n" + 
+                "\n 版权所有（c）2019 meng ke, suulnnka\n");
             alert(" 免责声明:\n" +
                 "在使用本作品前，请您务必仔细阅读并透彻理解本声明。您可以选择不使用本作品，但如果您使用本作品，您的使用行为将被视为对本声明全部内容的认可。\n" +
                 "本作品产生的文章由用户输入内容结合随机信息生成，版权人不保障生成文章的安全性、正确性、及时性、合法性，用户在使用过程中的风险由用户自行承担，版权人对用户使用本作品产生的内容其概不负责，亦不承担任何法律责任。\n" +
@@ -80,7 +75,6 @@
                 "本作品不对用户使用过程中使用的任何第三方产品负责，亦不承担任何法律责任。\n" +
                 "本作品不对任何本作品使用的第三方服务负责，亦不承担任何法律责任。\n" +
                 "本作品不对任何基于本作品的衍生品负责，亦不承担任何法律责任。\n");
-            alert("许可证:\n版权所有（c）2019 meng ke, suulnnka\n");
         </script>
         <script src="../../js/windowcontrol.js"></script>
         <script src="js/bullshitgenerator.js"></script>

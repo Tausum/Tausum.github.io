@@ -1,6 +1,6 @@
 (function() {
 
-    var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
+    var jiange,width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
     // Main
     initHeader();
@@ -22,10 +22,11 @@
 
         // create points
         points = [];
-        for(var x = 0; x < width; x = x + width/20) {
-            for(var y = 0; y < height; y = y + height/20) {
-                var px = x + Math.random()*width/20;
-                var py = y + Math.random()*height/20;
+        jiange=25;
+        for(var x = 0; x < width; x = x + width/jiange) {
+            for(var y = 0; y < height; y = y + height/jiange) {
+                var px = x + Math.random()*width/jiange;
+                var py = y + Math.random()*height/jiange;
                 var p = {x: px, originX: px, y: py, originY: py };
                 points.push(p);
             }
@@ -88,7 +89,7 @@
             posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
         }
         target.x = posx;
-        target.y = posy;
+        target.y = posy-200;
     }
 
     function scrollCheck() {

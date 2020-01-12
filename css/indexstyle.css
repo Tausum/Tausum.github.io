@@ -1,3 +1,6 @@
+* { 
+    touch-action: pan-y; 
+}
 body {
     background-color: #333;
     padding: 0;
@@ -34,9 +37,11 @@ canvas {
 
 
 table {
+    position: absolute;
     width: 60vw;
     height: 50vh;
-    margin: 0 auto;
+    left: 18vw;
+    text-align: left;   
 }
 
 td {
@@ -46,6 +51,10 @@ td {
 
 tr {
     height: 2vh;
+}
+table tr td:nth-child(1){
+    
+    
 }
 
 .IsHeader {

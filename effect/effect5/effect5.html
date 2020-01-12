@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tau's Box Effect</title>
+        <title>桌面</title>
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <link rel="stylesheet" href="css/style.css">
 
@@ -13,8 +13,7 @@
         <link rel="stylesheet" type="text/css" href="css/component.css" />
         <!--[if IE]>
 		<script src="js/html5.js"></script>
-		<![endif]-->
-        <style>
+		<![endif]-->        <style>
             p {
                 color: white;
                 width: 100%;
@@ -38,7 +37,7 @@
         <div class="container demo-1">
             <div class="content">
                 <div id="large-header" class="large-header">
-                    <div style="position:absolute;left:30%;top:30vh;" class="time" id="time" data-hours="" data-minutes="">
+                    <div class="time" id="time" data-hours="" data-minutes="">
                         <div class="digit">
                             <div class="line"></div>
                             <div class="line"></div>
@@ -93,23 +92,27 @@
                             <div class="line"></div>
                             <div class="line"></div>
                         </div>
+
+
                     </div>
+
                     <canvas id="demo-canvas"></canvas>
                 </div>
             </div>
 
         </div><!-- /container -->
 
+        <div style="position: absolute;top:20px; width: 100%;">
+            <p><a id="backbtn" style="cursor: pointer;"  target="_self">返回</a></p>
+        </div>
+        <script src="../../js/windowcontrol.js"></script>
         <script src="js/TweenLite.min.js"></script>
         <script src="js/EasePack.min.js"></script>
         <script src="js/rAF.js"></script>
         <script src="js/demo-1.js"></script>
 
-        <div style="position: absolute;top:20px; width: 100%;">
-            <p><a onclick="winctrl_backpage()" style="cursor: pointer;"  target="_self">返回</a></p>
-        </div>
-        <script src="js/Rx.min.js"></script>
-        <script src="js/rxcss.min.js"></script>
+        <script src='js/Rx.min.js'></script>
+        <script src='js/rxcss.min.js'></script>
         <script src="js/index.js"></script>
 
     </body>
